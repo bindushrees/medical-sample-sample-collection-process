@@ -1,0 +1,45 @@
+Independent Variables:
+
+1. Patient ID = ID Given to the patient on booking the test
+
+2. Patient age = Age of the patient
+
+3. Patient Gender = Gender of the patient (Male, Female)
+
+4. Test Name = Test to be performed after sample collection
+
+5. Sample = Type of sample collected (Urin,Blood,Swab)
+
+6. Way of storage of sample = How the sample is stored while transporting (Advanced, normal)
+
+7. Test booking date = The date on which the test was booked
+
+8. Test booking time =  Time of the day when the test was booked (24 hours) (ex 9.50 means 6 hour 50 minutes)
+
+10. Sample collection date = The date on which the sample should be collected
+
+11. Scheduled sample collection time = The time of the day at which the sample must be collected from the patient (24 hours) (ex 18.50 means 6 hour 50 minutes)
+
+12. Cut off Schedule = the time of the day when the test is performed on samples (Sample daily by 5pm, Daily)
+
+13. cut off time = Time of the day within which the sample must reach lab (24 hours) (ex 18.50 means 6 hour 50 minutes)
+
+14. Agent ID = ID of the agent who is going to pick and deliver the sample to the lab (Limited to 1 to 50)
+
+15. Traffic conditions = Traffic on the way to sample collection and sample delivery (Low Traffic, Medium Traffic, High Traffic)
+
+16. Agent Location = Distance of the agent from patient location in KMs
+
+17. Time taken to reach patient = Time take by agent from his location to reach the patient loacation (in minutes) (This can be assumed based on Traffic conditions)
+
+18. Time taken for sample collection = Time taken by the agent to collect the sample from the patient (in minutes)
+
+19. Lab Location = The distance between sample collection location to lab in KMs
+
+20. Time taken to reach lab = Time taken 	by agent from sample collection location to reach the lab location (in minutes) (this can be assumed based on Traffic conditions)
+
+21. Mode of Transport = vehical used to transport the sample (BIKE)
+
+Dependent variable:
+1. Reached on Time = Weather the sample has reached on time of need or not (Y = Yes, N = NO)
+

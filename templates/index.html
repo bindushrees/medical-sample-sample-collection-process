@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Medical Sample Process Streamline</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/14dab1683c.js" crossorigin="anonymous"></script>
+    
+    <!-- Custom CSS -->
+    <!--<link rel="stylesheet" href="C:/Users/bindu/OneDrive/Desktop/Data_Science_Course/0. Project/estimating_delivery_of sample_collection/static/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static' , filename = 'stylesheet.css')}}">
+  </head>
+  <body>
+    <strong><h1 class="display-5"> Medical Sample Collection</h1><br></strong>
+
+    <div class="container mb-3"><hr>
+      <form class="" action="{{url_for("prediction")}}" method="post">
+        <!-- running chain Motors Input -->
+          <label for="Patient_Age">Patient_Age : </label><br>
+            <input type="number" name="Patient_Age"><br><br>
+
+        <!-- carbonate gas line -->
+          <label for="Cut_off_time_HH_MM"> Cut_off_time_HH_MM : </label><br>
+          <input type="number" name="Cut_off_time_HH_MM"><br><br>
+
+        <!-- Bottle Capping Unit  -->
+          <label for="Time_For_Sample_Collection_MM">Time_For_Sample_Collection_MM : </label><br>
+          <input type="number" name="Time_For_Sample_Collection_MM" ><br><br>
+
+        <!-- Soft Drink Filler Machine -->
+          <label for="Lab_Location_KM">Lab_Location_KM :</label><br>
+          <input type="number" name="Lab_Location_KM"><br><br>
+
+        <!-- Firewood Boiler  -->
+          <label for="FWB">Patient_Gender_Male : </label><br>
+          <input type="radio" name="FWB" value="0">
+          <label for="FWB">Male</label><br>
+          <input type="radio" name="FWB" value="1">
+          <label for="FWB">Female</label><br><br>
+
+        <!-- Bottle Batch Coding Machine  -->
+          <label for="Test_Name">Test_Name : </label><br>       <!--&emsp;&emsp;&emsp;&emsp;&emsp;-->
+          <select id="Test_Name" name="Test_Name">
+            <option value="0">Acute kidney profile</option>
+            <option value="1">HbA1c</option>
+            <option value="2">Vitamin D-25Hydroxy</option>
+            <option value="3">TSH </option>
+              <option value="4">Lipid Profile</option>
+              <option value="5">Complete Urinalysis</option>
+              <option value="4">RTPCR</option>
+              <option value="7">H1N1</option>
+              <option value="8">Fasting blood sugar</option>
+              <option value="9">CBC</option>
+          </select><br><br>
+
+        <!-- other consumption -->
+          <label for="Sample">Sample : </label><!--&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -->
+          <select id="Sample" name="Sample">
+            <option value="0">Blood</option>
+            <option value="1">Urine</option>
+            <option value="2">Swab</option>
+          </select><br><br>
+          
+          <label for="Way_Of_Storage_Of_Sample">Way_Of_Storage_Of_Sample : </label><br><!--&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -->
+          <select id="Way_Of_Storage_Of_Sample" name="Way_Of_Storage_Of_Sample">
+            <option value="0">Advanced</option>
+            <option value="1">Normal</option>
+          </select><br><br>
+          
+          <label for="Cut_off_Schedule">Cut_off_Schedule : </label><br><!--&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -->
+          <select id="Cut_off_Schedule" name="Cut_off_Schedule">
+            <option value="0">Sample by 5pm</option>
+            <option value="1">Daily</option>
+          </select><br><br>
+          
+          <label for="Traffic_Conditions">Traffic_Conditions : </label><br><!--&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -->
+          <select id="Traffic_Conditions" name="Traffic_Conditions">
+            <option value="0">Low Traffic</option>
+            <option value="1">Medium Traffic</option>
+            <option value="2">High Traffic</option>
+          </select><br><br>
+        
+          <label for="Time_Taken_To_Reach_Lab_MM">Time_Taken_To_Reach_Lab_MM : </label><br><!--&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -->
+          <input type="number" name="Time_Taken_To_Reach_Lab_MM" ><br><br>
+
+          <!-- button -->
+            <button type="submit" class="btn btn-outline-primary btn-lg">Predict</button>
+            <h1 class="navbar-brand">{{ output }}</h1>
+
+      </form>
+
+    </div>
+  </body>
+</html>
